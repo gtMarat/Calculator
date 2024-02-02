@@ -20,13 +20,10 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        // Примеры использования:
-        processCalculation("1 + 2"); // Ожидаемый результат: 3
-        processCalculation("VI / III"); // Ожидаемый результат: II
-        processCalculation("I - II"); // Ожидаемое исключение, т.к. в римской системе нет отрицательных чисел
-        processCalculation("I + 1"); // Ожидаемое исключение, т.к. используются одновременно разные системы счисления
-        processCalculation("1"); // Ожидаемое исключение, т.к. строка не является математической операцией
-        processCalculation("1 + 2 + 3"); // Ожидаемое исключение, т.к. формат математической операции не удовлетворяет заданию - два операнда и один оператор (+, -, /, *)
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Введите выражение:");
+        String input = scanner.nextLine();
+        processCalculation(input);
     }
 
     private static void processCalculation(String input) {
@@ -132,6 +129,3 @@ public class Main {
         }
     }
 }
-
-
-
